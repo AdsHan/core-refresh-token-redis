@@ -145,12 +145,13 @@ namespace RTO.Auth.API.Service
                 Email = response.UserToken.Email
             };
 
-            // Calcula a validade do refresh token (O Redis irá invalidar o registro automaticamente de acordo com a validade)            
+            // Validade do refresh token (O Redis irá invalidar o registro automaticamente de acordo com a validade)            
             TimeSpan finalExpiration = TimeSpan.FromSeconds(_tokenConfigurations.FinalExpirationSeconds);
 
             DistributedCacheEntryOptions optionsCache = new DistributedCacheEntryOptions();
             optionsCache.SetAbsoluteExpiration(finalExpiration);
 
+            // Grava o Refresh Token no cache
             _cache.SetString(response.RefreshToken, JsonSerializer.Serialize(refreshTokenModel), optionsCache);
 
             return response;

@@ -7,8 +7,7 @@ namespace RTO.Auth.API.Configuration
     {
         public static IServiceCollection AddRedisConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
-
-            // Ativando o uso de cache via Redis
+            
             services.AddDistributedRedisCache(options =>
             {
                 options.Configuration = configuration.GetConnectionString("RedisCs");

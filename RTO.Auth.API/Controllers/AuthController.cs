@@ -13,13 +13,10 @@ namespace RTO.Auth.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly TokenConfigurations _tokenConfigurations;
-        private IDistributedCache _cache;
 
-        public AuthController(TokenConfigurations tokenConfigurations, IDistributedCache cache)
+        public AuthController()
         {
-            _tokenConfigurations = tokenConfigurations;
-            _cache = cache;
+
         }
 
         // POST api/auth
