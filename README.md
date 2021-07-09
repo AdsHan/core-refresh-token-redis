@@ -1,6 +1,6 @@
 # core-jwt-refresh-token-redis
 
-Aplicação .Net Core 5.0 Web API desenvolvida com o objetivo de demonstrar uma rotina de login com geração de Token JWT e Refresh Token. Caso o Token esteja expirado é possível enviar o Refresh Token a fim de obter um novo token de autenticação. O Refresh Token é salvo através de cache baseado em Redis (Microsoft.Extensions.Caching.Redis)
+Aplicação .Net Core 5.0 Web API desenvolvida com o objetivo de demonstrar uma rotina de login com geração de Token JWT e Refresh Token. Caso o Token esteja expirado é possível enviar o Refresh Token a fim de obter um novo token de autenticação. O Refresh Token é salvo através de cache baseado em Redis (Microsoft.Extensions.Caching.Redis).
 
 # Este projeto contém:
 
